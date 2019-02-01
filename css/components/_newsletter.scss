@@ -1,0 +1,93 @@
+.newsletter{
+    background-color: $verde;
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    max-width: 400px;
+    transform: translate(-50%);
+    &-title{
+        color: $pretocinza;
+        font-size: 16px;
+        font-weight: 300;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    > p{
+        color: white;
+        font-size: 10px;
+        margin-top: 15px;
+    }
+    }
+.newsletter-field{
+    margin-top: 20px;
+    &-input{
+        outline: none;
+        background: none;
+        color: white;
+        padding: 10px;
+        &::placeholder{
+            color: $pretocinza;
+        }
+    }
+    
+}
+.newsletter-btn{
+    background: none;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+@include tablet{
+    .newsletter{
+        left: 50%;
+        max-width: 550px;
+        width: 65%;
+    &-title{
+        font-size: 18px;
+        max-width: 400px;
+    }
+    > p{
+        font-size: 12px;
+    }
+    }
+
+}
+@include desktop{
+    .newsletter{
+        max-width:inherit;
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    &-title{
+        font-size: 18px;
+        max-width: inherit;
+        &:before{
+            content: '';
+            display: inline-block;
+            background: url(../../img/Group310.png)no-repeat;
+            width: 40px;
+            height: 50px;
+            position: relative;
+            right: 30px;
+            top: 20px;
+        }
+    }
+    > p{
+        font-size: 12px;
+    }
+    }
+    .newsletter-field{
+        width: 60%;
+        &-input{
+            width: 60%;
+            padding: 15px;
+        }
+
+    }
+
+}

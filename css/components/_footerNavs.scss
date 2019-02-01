@@ -1,0 +1,133 @@
+.footer-container-superior{
+    width: 100%;
+}
+.footer-navs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 80px 10px 20px;
+    &:nth-child(2){
+            padding-top: 0;
+        }
+}
+.footer-nav{
+    width: 100%;
+    max-width: 400px;
+    font-size: 13px;
+    line-height: 25px;
+    &__option{
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+   
+    &--0{
+         margin-bottom: 20px;
+        .footer-nav__option{
+           display: block;
+           border-bottom: 2px solid $verde; 
+            color: $verde;
+            line-height: 30px;
+            &::before{
+                content: '';
+                display: block;
+                width: 32px;
+                height: 22px;
+                background: url(../../img/Group522.png)no-repeat;
+                background-size: contain;
+                float: left;
+            }
+        }
+    }
+    &--1{
+         margin-bottom: 20px;
+        .footer-nav__option{
+            display: block;
+            border-bottom: 2px solid $laranja;
+            color: $laranja;
+            line-height: 30px;
+            &::before{
+                content: '';
+                display: block;
+                width: 32px;
+                height: 22px;
+                background: url(../../img/Group533.png)no-repeat;
+                background-size: contain;
+                float: left;
+            }
+        }
+    }
+}
+@include tablet{
+    .footer-navs{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    padding: 80px 10px 20px;
+        &:nth-child(2){
+            padding-top: 0;
+        }
+}
+.footer-nav{
+    width: 100%;
+    max-width: 265px;
+    font-size: 13px;
+    line-height: 25px;
+    margin-right: 10px;
+    &__option{
+        line-height: 25px;
+        margin-bottom: 5px;
+    }
+   
+    &--0{
+         margin-bottom: 20px;
+        .footer-nav__option{
+           display: block;
+           border-bottom: 2px solid $verde; 
+            color: $verde;
+            line-height: 30px;
+            &::before{
+                content: '';
+                display: block;
+                width: 32px;
+                height: 22px;
+                background: url(../../img/Group522.png)no-repeat;
+                background-size: contain;
+                float: left;
+            }
+        }
+    }
+    &--1{
+         margin-bottom: 20px;
+        .footer-nav__option{
+            display: block;
+            border-bottom: 2px solid $laranja;
+            color: $laranja;
+            line-height: 30px;
+            &::before{
+                content: '';
+                display: block;
+                width: 32px;
+                height: 22px;
+                background: url(../../img/Group533.png)no-repeat;
+                background-size: contain;
+                float: left;
+            }
+        }
+    }
+}
+}
+@include desktop{
+    .footer-container-superior{
+        display: flex;
+        justify-content: center;
+        width: 70%;
+        margin-top: 50px;
+    }
+    .footer-navs{
+        padding: 0;
+        width: 50%;
+        align-items: flex-start;
+    }
+}

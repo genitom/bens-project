@@ -1,0 +1,50 @@
+.about-hero-video{
+    margin-top: 70px;
+    position: relative;
+}
+.about-hero-link > img{
+    min-height: 200px;
+    height: auto;
+}
+.about-play-box{
+    width: 40px;
+    height: 40px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%);
+    border-radius: 50%;
+    position: relative;
+    background-color: white;
+    overflow: hidden;
+    &::before{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 30px;
+        left: 100%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        border-right: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-left: 10px solid $verde;
+        border-bottom: 10px solid transparent;
+        background-clip: content-box;
+    }
+}
+.about-container{
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    }
+.about-context{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+    & p{
+        font-size: 28px;
+        color: #fff;
+    }
+}

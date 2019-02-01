@@ -1,0 +1,17 @@
+$('.owl-carousel-portal').owlCarousel({
+    loop:true,
+    responsiveClass:true,
+    autoplay:true,
+    autoplayTimeout:5000,
+    responsive:{
+        0:{
+            items:1,
+            nav:true
+        },
+        600:{
+            items:2,
+            nav:false,
+            loop:false
+        },
+    }
+})

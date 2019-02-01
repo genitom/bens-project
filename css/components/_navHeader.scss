@@ -1,0 +1,166 @@
+.nav-header{
+    position: fixed;
+    top: 35px;
+    width: 100%;
+    display: none;
+    z-index: 3;
+    .nav-header-items{
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        line-height: 25px;
+    }
+    .nav-header-item__link{
+        transition: all 0.2s;
+    }
+    .nav-header-item__link:hover{
+        color: black;
+        font-size: 16px;
+    }
+    .nav-header-item{
+            &:nth-child(1)::before{
+                content: '';
+                display: block;
+                float: left;
+                background: url(../../img/Group244hover.png)no-repeat;
+                background-size: contain;
+                width: 23px;
+                height: 20px;
+                margin-right: 5px;
+            }
+        }
+    .nav-header-btn{
+        position: absolute;
+        top: -35px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor:pointer;
+        outline: none;
+        
+    }
+    .nav-header-item:last-child{
+        margin-bottom: 0;
+    }
+    .nav-header-item__link{
+        font-size: 15px;
+    }
+    &--0{
+        .nav-header-btn{
+            right: 10%;
+            color: $verde;
+        }
+          .nav-header-items{
+            background-color: $verde;
+        }
+    }
+    &--1{
+        .nav-header-btn{
+            left: 10%;
+            color: $laranja;
+    }
+         .nav-header-items{
+            background-color: $laranja;
+        }
+    }
+}
+.nav-header.active{
+    display: block;
+}
+
+//////////////* TABLET *////////////////////
+
+@include tablet{
+    .nav-header{
+        width: 50%;
+    .nav-header-items{
+       align-items: center;
+    }
+
+    .nav-header-item{
+        width: 60%;
+        }
+    .nav-header-btn{
+        position: absolute;
+        top: -35px;
+        background: none;
+        border: none;
+        font-size: 30px;
+        cursor:pointer;
+        outline: none;
+    }
+    .nav-header-item:last-child{
+        margin-bottom: 0;
+    }
+    .nav-header-item__link{
+        font-size: 15px;
+    }
+    &--0{
+        .nav-header-btn{
+            right: 10px;
+        }
+
+    }
+    &--1{
+        .nav-header-btn{
+            left: 100%;
+    }
+    .nav-header-items{
+        left: 100%;
+        position: absolute;
+        width: 100%;
+    }
+
+    }
+}
+}
+////////////////* DESKTOP *//////////////////
+
+@include desktop{
+    .nav-header{
+        position:absolute;
+        width: auto;
+        display: block;
+        left: 50%;
+        transform:translate(-50%);
+        display: none;
+    .nav-header-items{
+        width: 100%;
+        padding: 35px 20px;
+        display: flex;
+        flex-direction: row;
+        line-height: 25px;
+    }
+    .nav-header-item{
+        width: auto;
+        padding-right: 30px;
+         &:nth-child(1),&:nth-child(6),&:nth-child(7){
+                display: none;
+            }
+        &:nth-child(5){
+            padding-right: 0;
+        }
+        }
+        .nav-header-btn{
+            display: none;
+    }
+    .nav-header-item__link{
+        font-size: 14px;
+    }
+    .nav-header-item__link:hover{
+        color: $pretocinza;
+        font-size: 14px;
+    }
+    &--0{
+          .nav-header-items{
+            background-color: transparent;
+        }
+    }
+    &--1{
+         .nav-header-items{
+            background-color: transparent;
+            position: static;
+        }
+    }
+}
+}

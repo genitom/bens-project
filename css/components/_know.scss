@@ -1,0 +1,83 @@
+.know-portal{
+    margin-bottom: 130px;
+    position: relative;
+    &-item--1{
+    }
+}
+.know-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.know-portal-item{
+    position: relative;
+    width: 100%;
+    padding: 10px;
+}
+.know-portal-figure{
+    position: relative;
+}
+.know-portal-container{
+    position: absolute;
+    bottom: 10px;
+    padding: 0 10px;
+    & time{
+        display: block;
+        color: $verde;
+        margin-bottom: 10px;
+    }
+    &__link{
+        color: white;
+    }
+}
+.know-portal-link{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background-color: $verde;
+    right: 0;
+    top: 0;
+    &__item{
+        width: 2px;
+        height: 10px;
+        background-color: white;
+        position: absolute;
+        transform: translate(-50%,-50%);
+        top: 50%;
+        left: 50%;
+    }
+    &__item:nth-child(1){
+        transform: rotate(45deg);
+    }
+    &__item:nth-child(2){
+        transform: rotate(-45deg);
+        top: 35%;
+    }
+}
+.know-portal-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__link{
+        @include tipografia-btn;
+        margin: 20px 0;
+    }
+}
+@include desktop {
+    .know-portal{
+        &:before{
+            content: '';
+            display: block;
+            width: 100%;
+            height: 1000px;
+            background: url(../../img/Grafismo.png)no-repeat;
+            background-size: contain;
+            position: absolute;
+            top: -190px;
+            right: -60%;
+        }
+}
+}
